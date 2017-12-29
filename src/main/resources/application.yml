@@ -1,0 +1,17 @@
+server:
+  port: 8888
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    cache: false
+  datasource:
+      url: jdbc:mysql://localhost:3306/prac
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: nimei025
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: mysql

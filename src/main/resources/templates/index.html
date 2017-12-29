@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>人员显示界面</title>
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border: dashed 1px blue">
+    <tr>
+        <th align="centre">人员管理</th>
+    </tr>
+    <tr>
+        <td valign="top" bgcolor="#F7F8F9"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="53%" valign="top" th:text="${session.default}"></td>
+            </tr>
+            <tr>
+                <td valign="middle">
+			<div id="manageSubject" align="center">
+			<table width="95%" cellspacing="10">
+				  <tr align="center">
+					<td>人员id</td>
+					<td>人员名称</td>
+					<td>人员姓名</td>
+				  </tr>
+				  	 <tr align="center" th:each="prod : ${session.persons}">
+							<td th:text="${prod.id}">name</td>
+							<td th:text="${prod.name}">dad</td>
+							<td th:text="${prod.sex}">faf</td>
+							<td th:text="删除"></td>
+							<td th:text="更新"></td>
+					  </tr>
+        </table>
+            </div>
+                </td>
+                <td background="images/mail_rightbg.gif">&nbsp;</td>
+            </tr>
+        </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
